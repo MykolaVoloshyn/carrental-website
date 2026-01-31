@@ -1,0 +1,171 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="shortcut icon" href="{% static 'icons/favicon.svg' %}">
+
+    {% comment %} Google Font links {% endcomment %}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet" />
+
+    {% comment %} Swiper link {% endcomment %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+
+    {% comment %} CSS links {% endcomment %}
+    <link type="text/css" rel="stylesheet" href="{% static 'main_page/main_page.css' %}" />
+
+    {% comment %} JavaScript link {% endcomment %}
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js" defer></script>
+    <script src="{% static 'js/main.js' %}" defer></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        {% comment %} HEADER {% endcomment %}
+        {% comment %} '{% block navbar_class %}{% endblock %}' allows to add classes from another templates
+        {% endcomment %}
+        <header class="header {% block navbar_class %}{% endblock %}">
+            <div class="container">
+                <div class="header__inner">
+                    <a href="{% url 'main_page' %}" class="logo">
+                        <img src="{% static 'icons/logo.svg' %}" alt="" class="logo__img" />
+                    </a>
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__list-item">
+                                <a href="#" class="menu__list-link">CARS</a>
+                            </li>
+                            <li class="menu__list-item">
+                                <a href="#" class="menu__list-link">BECOME A HOST</a>
+                            </li>
+                            <li class="menu__list-item">
+                                <a href="#" class="menu__list-link">PRICING & OFFERS</a>
+                            </li>
+                            <li class="menu__list-item">
+                                <a href="#" class="menu__list-link">CONTACT US</a>
+                            </li>
+                            <li class="menu__list-item">
+                                <a href="#" class="menu__list-link">LOGIN</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            {% block content %}{% endblock %}
+        </main>
+        {% comment %} FOOTER {% endcomment %}
+        <footer class="footer">
+            <div class="container">
+                <nav class="footer__menu">
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-item">
+                            <p class="footer__menu-title">Locations</p>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link">USA (EN)</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link">Canada (EN)</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link">UK (EN)</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-item">
+                            <p class="footer__menu-title">Resources</p>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link">Blog</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link">FAQ</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link">Contact us</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-item">
+                            <p class="footer__menu-title">Get to know us</p>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link">About us</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link">Team</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-item">
+                            <p class="footer__menu-title">Explore</p>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link">Become a host</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link">Careers</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link">Insurance & protection</a>
+                        </li>
+
+                    </ul>
+                </nav>
+                <ul class="app">
+                    <li class="app__item">
+                        <a href="#" class="app__item-link">
+                            <img src="{% static 'icons/appstore.svg' %}" alt="" class="app__item-img" />
+                        </a>
+                    </li>
+                    <li class="app__item">
+                        <a href="#" class="app__item-link">
+                            <img src="{% static 'icons/googleplay.svg' %}" alt="" class="app__item-img" />
+                        </a>
+                    </li>
+                </ul>
+                <div class="footer__copywrite">
+                    <p class="footer__copywrite-text">
+                        For questions about our car rental services, please contact us at
+                        1-888-878-3227.
+                    </p>
+                    <p class="footer__copywrite-text">
+                        All vehicles listed on this website are offered for rent by our certified
+                        rental service. Our team is committed to providing excellent customer service
+                        and maintaining a fleet that meets high standards of quality, safety, and reliability.
+                    </p>
+                    <p class="footer__copywrite-text">
+                        We do not sell or lease vehicles; all rentals are subject to availability.
+                        By using this website, you agree to our Terms of Service and Privacy Policy.
+                    </p>
+                </div>
+                <nav class="copy__nav">
+                    <ul class="copy__nav-list">
+                        <li class="copy__nav-item">
+                            <a href="#" class="copy__nav-link">Terms of Service</a>
+                        </li>
+                        <li class="copy__nav-item">
+                            <a href="#" class="copy__nav-link">Privacy Policy</a>
+                        </li>
+                        <li class="copy__nav-item">
+                            <a href="#" class="copy__nav-link">Do Not Sell My Personal Information</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

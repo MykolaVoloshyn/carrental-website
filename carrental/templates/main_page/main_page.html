@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block title %}Prime Rental{% endblock  %}
+{% block navbar_class %}header-main{% endblock %} {% comment %}needed to make navbar transparent{% endcomment %}
+
+{% block content %}
+
+{% comment %} MAIN {% endcomment %}
+<section class="top">
+    <div class="container">
+        <h1 class="title">PREMIUM CARS FOR YOU</h1>
+        <a href="#" class="top__link">FIND A CAR</a>
+    </div>
+</section>
+<div class="slider">
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url({% static 'images/slide-1.jpg' %})"></div>
+            <div class="swiper-slide" style="background-image: url({% static 'images/slide-2.jpg' %})"></div>
+            <div class="swiper-slide" style="background-image: url({% static 'images/slide-3.jpg' %})"></div>
+            <div class="swiper-slide" style="background-image: url({% static 'images/slide-4.jpg' %})"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+<section class="why-lease">
+    <div class="container">
+        <h2 class="section-title">Why Rent From Us?</h2>
+        <ul class="why-lease__list">
+            <li class="why-lease__item">
+                <img src="static/icons/why-lease-img-1.svg" alt="" class="why-lease__item-img" />
+                <h3 class="why-lease__item-title">Premium Cars</h3>
+                <p class="why-lease__item-text">
+                    We offer a carefully selected fleet of premium, well-maintained
+                    vehicles for a superior driving experience
+                </p>
+            </li>
+            <li class="why-lease__item">
+                <img src="{% static 'icons/why-lease-img-2.svg' %}" alt="" class="why-lease__item-img" />
+                <h3 class="why-lease__item-title">Special Deals.</h3>
+                <p class="why-lease__item-text">
+                    Some of our cars are available at reduced prices for a limited
+                    time. Great value without compromising quality.
+                </p>
+            </li>
+            <li class="why-lease__item">
+                <img src="{% static 'icons/why-lease-img-3.svg' %}" alt="" class="why-lease__item-img" />
+                <h3 class="why-lease__item-title">Convenient Payment</h3>
+                <p class="why-lease__item-text">
+                    Our payment process is fast, secure, and easy to use. Choose
+                    from multiple payment options that fit your needs.
+                </p>
+            </li>
+            <li class="why-lease__item">
+                <img src="{% static 'icons/why-lease-img-4.svg' %}" alt="" class="why-lease__item-img" />
+                <h3 class="why-lease__item-title">Rental Extentios</h3>
+                <p class="why-lease__item-text">
+                    Change your plans with ease. Extending your rental is fast,
+                    convenient, and transparent.
+                </p>
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="how-work">
+    <div class="container">
+        <h2 class="section-title">How Does Car Renting Work?</h2>
+        <div class="how-work__inner">
+            <p class="how-work__text">
+                Renting a car is a short-term agreement that gives you full access
+                to a vehicle without owning it. Instead of purchasing the car, you
+                pay a daily, weekly, or monthly fee to use it for the duration of
+                your rental period. Rentals often include flexible options, such as
+                extending your booking or choosing additional services, so you can
+                enjoy the convenience of a car whenever you need it — with none of
+                the long-term commitments of ownership.
+            </p>
+            <h4 class="how-work__title">
+                Similar to any rental agreement, car rentals come with clear terms
+                that define:
+            </h4>
+            <ol class="how-work__list">
+                <li class="how-work__item">
+                    <span>Mileage limits</span> - some rentals may have daily or weekly
+                    mileage caps, with extra charges for exceeding them.
+                </li>
+                <li class="how-work__item">
+                    <span>Vehicle condition</span> - you are responsible for
+                    returning the car in good condition; damages may incur additional fees.
+                </li>
+                <li class="how-work__item">
+                    <span>Return procedures</span> - instructions for returning the car
+                    on time and in the right place, including any applicable fees for
+                    late returns.
+                </li>
+            </ol>
+            <p class="how-work__text">
+                Car rentals are flexible, but returning a vehicle late or failing to
+                follow the rental terms can lead to extra charges. Always plan your rental
+                period carefully to avoid unnecessary fees.
+            </p>
+        </div>
+    </div>
+</section>
+<section class="video">
+    <div class="container">
+        <h2 class="section-title video__title">WELCOME TO PRIME RENTAL</h2>
+        <p class="video__text">We will help you get the most out of your trip.</p>
+        <iframe class="video__content" width="1000" height="500"
+            src="https://www.youtube.com/embed/jPxLYNAaLOk?si=_rG1GLO30hlNUOGW&amp;controls=0"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</section>
+<section class="important">
+    <div class="container">
+        <h2 class="section-title important__title">Important Things to Consider</h2>
+        <p class="important__text">
+            Depending on your travel plans, budget, and personal preferences, renting a car
+            can be an ideal solution for your next trip. Below are some key factors to keep in mind.
+        </p>
+        <ul class="important__list">
+            <li class="important__item">
+                <img src="{% static 'images/imp-1.png' %}" alt="" class="important__item-img" />
+                <p class="important__item-text">
+                    Renting is often more cost-effective for short-term needs compared to buying or leasing.
+                </p>
+            </li>
+            <li class="important__item">
+                <img src="{% static 'images/imp-2.png' %}" alt="" class="important__item-img" />
+                <p class="important__item-text">
+                    You can choose from a wide variety of vehicles to match your trip or style.
+                </p>
+            </li>
+            <li class="important__item">
+                <img src="{% static 'images/imp-3.png' %}" alt="" class="important__item-img" />
+                <p class="important__item-text">
+                    Flexible rental periods make it easy to adjust plans at any time.
+                </p>
+            </li>
+            <li class="important__item">
+                <img src="{% static 'images/imp-4.png' %}" alt="" class="important__item-img" />
+                <p class="important__item-text">
+                    Additional fees may apply for extra mileage, late returns, or optional services.
+                </p>
+            </li>
+        </ul>
+    </div>
+</section>
+
+{% endblock %}
